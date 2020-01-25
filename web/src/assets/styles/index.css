@@ -1,0 +1,13 @@
+html, body {
+
+    height: 100%;
+    width: 100%;
+    display: table;
+
+    font-family: 'Roboto';
+    font-size: 14pt;
+
+    background-size: 100% auto;
+    background-image: url(../../assets/images/the-office-bg.jpg);
+
+}

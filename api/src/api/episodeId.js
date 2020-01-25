@@ -1,6 +1,6 @@
 const {getDbConnection} = require('../db');
 
-const getEpisodeIds = (res, req) => {
+const getEpisodeIds = (req, res) => {
     
     const {params: {episodeId}} = req;
     

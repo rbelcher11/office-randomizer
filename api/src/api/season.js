@@ -1,9 +1,20 @@
 const {getDbConnection} = require('../db');
 
-const getSeasons = (res, req) => {
+const getSeasons = (req, res) => {
+
     const connection = getDbConnection();
 
-    connection.query('SELECT id, name, year FROM season', (err, results) => {
+    connection.query(`
+        SELECT 
+            season.id, 
+            season.name, 
+            season.year, 
+            COUNT(episode.id) as episode_count
+        FROM season 
+        LEFT JOIN episode 
+        ON episode.season = season.id 
+        GROUP BY season.id
+    `, (err, results) => {
 
         if (err) {
             return res.status(500);
@@ -12,7 +23,8 @@ const getSeasons = (res, req) => {
             const result = results.map((row, index) => ({
                 id: row.id,
                 name: row.name,
-                year: row.year
+                year: row.year,
+                episodeCount: row.episode_count
             }));
 
             return res.send(result);

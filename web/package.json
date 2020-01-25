@@ -4,26 +4,62 @@
   "description": "",
   "main": "dist/index.html",
   "scripts": {
+    "build": "wepack --mode production",
+    "start": "webpack-dev-server --debug --output-pathinfo --mode development --progress --color",
     "test": "jest"
   },
   "keywords": [
     "office",
     "reactjs"
   ],
-  "author": "",
+  "author": {
+    "name": "Ryan Belcher",
+    "url": "https://github.com/rbelcher11"
+  },
+  "contributors": [
+    {
+      "email": "robin@anigenero.com",
+      "name": "Robin Schultz",
+      "url": "https://github.com/anigenero"
+    }
+  ],
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "@babel/preset-react": "^7.8.3",
+    "babel-jest": "^25.1.0",
     "babel-loader": "^8.0.6",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^5.1.1",
     "css-loader": "^3.4.2",
+    "file-loader": "^5.0.2",
     "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "jest": "^25.1.0",
+    "jest-cli": "^25.1.0",
+    "jest-environment-jsdom-global": "^1.2.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "react-test-renderer": "^16.12.0",
     "webpack": "^4.41.5",
     "webpack-cli": "^3.3.10",
     "webpack-dev-server": "^3.10.1"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.26",
+    "@fortawesome/free-solid-svg-icons": "^5.12.0",
+    "@fortawesome/react-fontawesome": "^0.1.8",
+    "connected-react-router": "^6.6.1",
+    "history": "^4.10.1",
     "react": "^16.12.0",
+    "react-dom": "^16.12.0",
     "react-redux": "^7.1.3",
-    "redux": "^4.0.5"
+    "react-router": "^5.1.2",
+    "react-router-dom": "^5.1.2",
+    "redux": "^4.0.5",
+    "redux-persist": "^6.0.0",
+    "redux-thunk": "^2.3.0",
+    "reset-css": "^5.0.1",
+    "thunk": "0.0.1"
   }
 }
