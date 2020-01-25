@@ -1,100 +1,17 @@
 const express = require('express');
+const {getEpisodes} = require('./api/episode');
+const {getSeasons} = require('./api/season');
+const {getSeasonIds} = require('./api/seasonId');
+
 const app = express();
 const port = 4000;
 
-const mysql = require('mysql');
+app.get('/season', getSeasons);
 
-const {getDbConnection} = require('./db');
+app.get('/season/:seasonId', getSeasonIds);
 
-app.get('/season', (req, res) => {
+app.get('/season/:seasonId/episode', getEpisodes);
 
-    const connection = getDbConnection();
-
-    connection.query('SELECT id, name, year FROM season', (err, results) => {
-
-        if (err) {
-            return res.status(500);
-        } else { 
-            
-            const result = results.map((row, index) => ({
-                id: row.id,
-                name: row.name,
-                year: row.year
-            }));
-
-            return res.send(result);
-
-        }
-
-    });
-
-    connection.end();
-
-});
-
-app.get('/season/:seasonId', (req, res) => {
-    
-    const {params: {seasonId}} = req;
-
-     const connection = getDbConnection();
-
-    connection.query('SELECT id, name, year FROM season WHERE id = ?', [seasonId], (err, results) => {
-
-        if (err) {
-            return res.status(500);
-        } else {
-            
-            const [row] = results;
-            const result = {
-                id: row.id,
-                name: row.name,
-                year: row.year
-            };
-
-            return res.send(result);
-
-        }
-
-    });
-
-    connection.end();
-
-});
-
-app.get('/season/:seasonId/episode', (req, res) => {
-
-    const {params: {seasonId}} = req;
-
-    const connection = getDbConnection();
-
-    connection.query('SELECT id, name, season FROM episode WHERE season = ?', [seasonId], (err, results) => {
-
-        if (err) {
-            return res.status(500);
-        } else {
-            
-            const result = results.map((row, index) => ({
-                id: row.id,
-                name: row.name,
-                season: row.season
-            }));
-
-            return res.send(result);
-
-        }
-
-    });
-
-    connection.end();
-
-});
-
-app.get('/episode/:episodeId', (req, res) => {
-
-    const {params: {episodeId}} = req;
-    
-    res.send(`episode ${episodeId}`);
-
-});
+app.get('/episode/:episodeId', getEpisodeIds);
 
 app.listen(port, () => console.log('running'));
