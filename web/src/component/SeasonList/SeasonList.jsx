@@ -5,6 +5,7 @@ import {faCaretRight, faRecycle} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {getRestApiEndpoint} from "../../util/config";
 import './SeasonList.css';
+import {push} from "connected-react-router";
 
 export const SeasonList = ({...props}) => {
 
@@ -59,7 +60,9 @@ export const SeasonList = ({...props}) => {
 
             <ul className="Season-list">
                 {selector.seasons && selector.seasons.map((season, index) => (
-                    <li key={`season-${index}`}>
+                    <li key={`season-${index}`} onClick={() => {
+                        dispatch(push(`/season/${season.id}`))
+                    }}>
                         <div>
                             <span className="Season-title">{season.name}</span>
                             <span className="Season-episode-count">{season.episodeCount} episodes</span>

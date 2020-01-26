@@ -74,14 +74,14 @@ VALUES
 (2, 13, 'The Secret', '2006-01-19'),
 (2, 14, 'The Carpet', '2006-01-26'),
 (2, 15, 'Boys and Girls', '2006-02-02'),
-(2, 16, 'Valentine'title's Day', '2006-02-09'),
-(2, 17, 'Dwight'title's Speech', '2006-03-02'),
+(2, 16, 'Valentine''s Day', '2006-02-09'),
+(2, 17, 'Dwight''s Speech', '2006-03-02'),
 (2, 18, 'Take Your Daughter to Work Day', '2006-03-16'),
-(2, 19, 'Michael'title's Birthday', '2006-03-30'),
+(2, 19, 'Michael''s Birthday', '2006-03-30'),
 (2, 20, 'Drug Testing', '2006-04-27'),
 (2, 21, 'Conflict Resolution', '2006-05-04'),
 (2, 22, 'Casino Night', '2006-05-11'),
---season three
+-- season three
 (3, 1, 'Gay Witch Hunt', '2006-09-21'),
 (3, 2, 'The Convention', '2006-09-28'),
 (3, 3, 'The Coup', '2006-10-05'),
@@ -96,16 +96,16 @@ VALUES
 (3, 12, 'Traveling Salesmen', '2007-01-11'),
 (3, 13, 'The Return', '2007-01-18'),
 (3, 14, 'Ben Franklin', '2007-02-01'),
-(3, 15, 'Phyllis'title' Wedding', '2007-02-08'),
+(3, 15, 'Phyllis'' Wedding', '2007-02-08'),
 (3, 16, 'Business School', '2007-02-15'),
 (3, 17, 'Cocktails', '2007-02-22'),
 (3, 18, 'The Negotiation', '2007-04-05'),
 (3, 19, 'Safety Training', '2007-04-12'),
 (3, 20, 'Product Recall', '2007-04-26'),
-(3, 21, 'Women'title's Appreciation', '2007-05-03'),
+(3, 21, 'Women''s Appreciation', '2007-05-03'),
 (3, 22, 'Beach Games', '2007-05-10'),
 (3, 23, 'The Job', '2007-05-17'),
---season 4
+-- season 4
 (4, 1, 'Fun Run', '2007-09-27'),
 (4, 2, 'Dunder Mifflin Infinity', '2007-10-04'),
 (4, 3, 'Launch Party', '2007-10-11'),
@@ -120,7 +120,7 @@ VALUES
 (4, 12, 'Did I stutter?', '2008-05-01'),
 (4, 13, 'Job Fair', '2008-05-08'),
 (4, 14, 'Goodbye, Toby', '2008-05-15'),
---season five
+-- season five
 (5, 1, 'Weight Loss', '2008-09-25'),
 (5, 2, 'Business Ethics', '2008-10-09'),
 (5, 3, 'Baby Shower', '2008-10-16'),
@@ -147,7 +147,7 @@ VALUES
 (5, 24, 'Casual Friday', '2009-04-30'),
 (5, 25, 'Cafe Disco', '2009-05-07'),
 (5, 26, 'Company Picnic', '2009-05-14'),
---season six
+-- season six
 (6, 1, 'Gossip', '2009-09-17'),
 (6, 2, 'The Meeting', '2009-09-24'),
 (6, 3, 'The Promotion', '2009-10-01'),
@@ -174,12 +174,12 @@ VALUES
 (6, 24, 'The Cover Up', '2010-05-06'),
 (6, 25, 'The Chump', '2010-05-13'),
 (6, 26, 'Whistleblower', '2010-05-20'),
---season seven
+-- season seven
 (7, 1, 'Nepotism', '2010-09-23'),
 (7, 2, 'Counseling ', '2010-09-30'),
 (7, 3, 'Andy''s Play', '2010-10-07'),
 (7, 4, 'Sex Ed', '2010-10-14'),
-(7, 5, 'The Sting', '2010-20-21'),
+(7, 5, 'The Sting', '2010-10-21'),
 (7, 6, 'Costume Contest', '2010-10-28'),
 (7, 7, 'Christening', '2010-11-04'),
 (7, 8, 'Viewing Party', '2010-11-11'),
@@ -199,7 +199,7 @@ VALUES
 (7, 22, 'The Inner Circle', '2011-05-05'),
 (7, 23, 'Dwight K. Schrute, (Acting) Manager', '2011-05-12'),
 (7, 24, 'Search Committee', '2011-05-19'),
---season eight
+-- season eight
 (8, 1, 'The List', '2011-09-22'),
 (8, 2, 'The Incentive', '2011-09-29'),
 (8, 3, 'Lotto', '2011-10-06'),
@@ -224,7 +224,7 @@ VALUES
 (8, 22, 'Fundraiser', '2012-04-26'),
 (8, 23, 'Turf War', '2012-05-03'),
 (8, 24, 'Free Family Portrait Studio', '2012-05-10'),
---season nine
+-- season nine
 (9, 1, 'New Guys', '2012-09-20'),
 (9, 2, 'Roy''s Wedding', '2012-09-27'),
 (9, 3, 'Andy''s Ancestry', '2012-10-04'),

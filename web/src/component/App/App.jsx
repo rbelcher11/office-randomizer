@@ -1,17 +1,19 @@
 import React from 'react';
 import './App.css';
-import {faRandom} from "@fortawesome/free-solid-svg-icons";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {SeasonList} from "../SeasonList/SeasonList";
+import {Switch, Route} from 'react-router-dom';
+import { EpisodeList } from '../EpisodeList/EpisodeList';
 
 export const App = ({...props}) => {
 
     return (
         <div className="App">
 
-            <FontAwesomeIcon icon={faRandom}/>
-
             <SeasonList />
+
+            <Switch>
+                <Route path="/season/:id" component={EpisodeList}/>
+            </Switch>
 
         </div>
     );

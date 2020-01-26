@@ -6,8 +6,10 @@ import storage from 'redux-persist/lib/storage';
 import {browserHistory} from "./browser.history";
 import thunkMiddleware from "redux-thunk"
 import {seasonReducer} from "./season/season.reducer";
+import { episodeReducer } from './episode/episode.reducer';
 
 export const reducer = combineReducers({
+    episode: episodeReducer,
     router: connectRouter(browserHistory),
     season: seasonReducer
 });

@@ -5,7 +5,7 @@
   "main": "dist/index.html",
   "scripts": {
     "build": "wepack --mode production",
-    "start": "webpack-dev-server --debug --output-pathinfo --mode development --progress --color",
+    "start": "webpack-dev-server --debug --output-pathinfo --mode development --progress --color --restEndpoint http://localhost:4000",
     "test": "jest"
   },
   "keywords": [

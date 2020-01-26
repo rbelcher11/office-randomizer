@@ -34,6 +34,7 @@ const getSeasons = (req, res) => {
     });
 
     connection.end();
+    
 };
 
 module.exports = {

@@ -10,6 +10,8 @@
 
     padding: .5em;
 
+    cursor: pointer;
+
     align-items: center;
     justify-content: space-between;
 
